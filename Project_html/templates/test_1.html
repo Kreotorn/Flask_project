@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Test </title>
+</head>
+<style>
+    h1 { font: Times New Roman;
+     position: relative;
+     left: 400px;
+     top: 50px}
+    .body_background { background: url(static/background_1.png) repeat left top }
+    .JOIA_background {
+     position: absolute;
+     left: 400px;
+     border-radius: 40px}
+
+
+</style>
+<body class="body_background">
+<img src="static/JOIA_2.jpg" height="200" width="800" class="JOIA_background">
+{% for pic in films %}
+<form action="http://htmlbook.ru/html/form">
+<button style="{{ pic }}"></button>
+</form>
+{% endfor %}
+
+{% for back in texts_backgrounds %}
+<img src="static/text_background_1.jpg" style="{{ back }}">
+{% endfor %}
+
+</body>
+</html>
